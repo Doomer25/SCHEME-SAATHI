@@ -62,8 +62,7 @@ export default function Home() {
         </div>
         <nav className="hidden md:flex items-center gap-8">
           <a className="text-sm font-semibold text-brown/60 hover:text-primary transition-colors" href="#how-it-works">How It Works</a>
-          <a className="text-sm font-semibold text-brown/60 hover:text-primary transition-colors" href="#features">Features</a>
-          <a className="text-sm font-semibold text-brown/60 hover:text-primary transition-colors" href="#schemes">Government Schemes</a>
+          <Link className="text-sm font-semibold text-brown/60 hover:text-primary transition-colors" href="/scheme/compare">Government Schemes</Link>
         </nav>
         <Link
           href="/profile"
@@ -139,15 +138,14 @@ export default function Home() {
             <div className="absolute -inset-3 bg-gradient-to-tr from-honey/30 to-primary/10 rounded-3xl blur-xl opacity-75"></div>
 
             <div className="relative bg-white rounded-2xl p-6 sm:p-7 shadow-xl border border-honey/10">
-              {/* Card Header */}
               <div className="flex items-center justify-between pb-5 border-b border-honey/20">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-full bg-honey/20 flex items-center justify-center">
                     <BarChart3 className="w-4 h-4 text-brown" />
                   </div>
                   <div>
-                    <h2 className="font-bold text-brown">Your Scheme Matches</h2>
-                    <p className="text-[11px] font-semibold text-brown/50">Matched profile: SC/ST Rural Entrepreneur</p>
+                    <h2 className="font-bold text-brown">Why it works</h2>
+                    <p className="text-[11px] font-semibold text-brown/50">Core product capabilities</p>
                   </div>
                 </div>
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-honey/10 text-brown text-[11px] font-bold border border-honey/20">
@@ -156,95 +154,65 @@ export default function Home() {
                 </span>
               </div>
 
-              {/* Scheme Stack */}
               <div className="flex flex-col gap-3.5 mt-5">
-                {/* NSFDC — Hero Item */}
-                <div className="p-4 rounded-xl bg-gradient-to-r from-honey/5 to-beige/10 shadow-sm border border-honey/15 hover:shadow-md transition-all">
-                  <div className="flex items-start justify-between gap-2">
+                <div className="p-4 rounded-xl bg-gradient-to-r from-honey/5 to-beige/10 shadow-sm border border-honey/15">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/15 flex items-center justify-center shrink-0">
+                      <BadgeCheck className="w-4 h-4 text-brown" />
+                    </div>
                     <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="px-2 py-0.5 rounded-full bg-primary text-brown text-[10px] font-black uppercase">Priority Target</span>
-                        <span className="text-[10px] font-semibold text-brown/50">Concessional Credit</span>
-                      </div>
-                      <h3 className="font-bold text-brown text-[15px]">NSFDC Term Loan</h3>
-                      <p className="text-xs text-brown/60 mt-0.5">National Scheduled Castes Finance & Dev Corporation</p>
+                      <h3 className="font-bold text-brown text-[15px]">Intelligent Profiler</h3>
+                      <p className="text-xs text-brown/60 mt-1 leading-relaxed">Matches demographics against cross-departmental eligibility matrices automatically.</p>
                     </div>
-                    <div className="flex flex-col items-end">
-                      <div className="px-3 py-1 rounded-full bg-primary text-brown text-2xl font-black leading-none">92%</div>
-                      <span className="text-[10px] font-semibold text-brown/50 mt-1">Match Score</span>
-                    </div>
-                  </div>
-                  <div className="mt-3 pt-3 border-t border-honey/20 flex items-center justify-between">
-                    <span className="text-xs text-primary font-bold">Up to ₹50,00,000 at 4% p.a.</span>
-                    <ChevronRight className="w-4 h-4 text-brown/40" />
                   </div>
                 </div>
 
-                {/* PMEGP */}
-                <div className="p-4 rounded-xl bg-white hover:bg-honey/5 transition-colors border border-honey/10 shadow-sm">
-                  <div className="flex items-start justify-between gap-2">
+                <div className="p-4 rounded-xl bg-white border border-honey/10 shadow-sm">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/15 flex items-center justify-center shrink-0">
+                      <Languages className="w-4 h-4 text-brown" />
+                    </div>
                     <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="px-2 py-0.5 rounded-full bg-beige/30 text-brown text-[10px] font-bold">Capital Subsidy</span>
-                        <span className="text-[10px] font-semibold text-brown/50">MSME / KVIC</span>
-                      </div>
-                      <h3 className="font-bold text-brown text-[15px]">PMEGP Scheme</h3>
-                      <p className="text-xs text-brown/60 mt-0.5">Prime Minister&apos;s Employment Generation Programme</p>
+                      <h3 className="font-bold text-brown text-[15px]">Bilingual Conversational Clarity</h3>
+                      <p className="text-xs text-brown/60 mt-1 leading-relaxed">Explains eligibility and document requirements in simple, plain-language answers.</p>
                     </div>
-                    <div className="flex flex-col items-end">
-                      <div className="px-2.5 py-0.5 rounded-full bg-beige/20 text-brown text-lg font-bold">78%</div>
-                      <span className="text-[10px] font-semibold text-brown/50 mt-1">Match Score</span>
-                    </div>
-                  </div>
-                  <div className="mt-3 pt-3 border-t border-honey/15 flex items-center justify-between">
-                    <span className="text-xs text-brown/60 font-semibold">Up to 35% Gov Subsidy</span>
-                    <ChevronRight className="w-4 h-4 text-brown/30" />
                   </div>
                 </div>
 
-                {/* PM-DAKSH */}
-                <div className="p-4 rounded-xl bg-white hover:bg-honey/5 transition-colors border border-honey/10 shadow-sm">
-                  <div className="flex items-start justify-between gap-2">
-                    <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="px-2 py-0.5 rounded-full bg-beige/30 text-brown text-[10px] font-bold">Skill & Upskilling</span>
-                        <span className="text-[10px] font-semibold text-brown/50">MoSJE</span>
-                      </div>
-                      <h3 className="font-bold text-brown text-[15px]">PM-DAKSH Yojana</h3>
-                      <p className="text-xs text-brown/60 mt-0.5">Pradhan Mantri Dakshta Aur Kushalta Sampann Hitgrahi</p>
+                <div className="p-4 rounded-xl bg-white border border-honey/10 shadow-sm">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/15 flex items-center justify-center shrink-0">
+                      <Search className="w-4 h-4 text-brown" />
                     </div>
-                    <div className="flex flex-col items-end">
-                      <div className="px-2.5 py-0.5 rounded-full bg-beige/20 text-brown text-lg font-bold">64%</div>
-                      <span className="text-[10px] font-semibold text-brown/50 mt-1">Match Score</span>
+                    <div>
+                      <h3 className="font-bold text-brown text-[15px]">Smart Scheme Discovery</h3>
+                      <p className="text-xs text-brown/60 mt-1 leading-relaxed">Surfaces relevant central and state government schemes based on your profile.</p>
                     </div>
                   </div>
-                  <div className="mt-3 pt-3 border-t border-honey/15 flex items-center justify-between">
-                    <span className="text-xs text-brown/60 font-semibold">Free Certification + Stipend</span>
-                    <ChevronRight className="w-4 h-4 text-brown/30" />
+                </div>
+
+                <div className="p-4 rounded-xl bg-white border border-honey/10 shadow-sm">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/15 flex items-center justify-center shrink-0">
+                      <CheckCircle className="w-4 h-4 text-brown" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-brown text-[15px]">Application Readiness</h3>
+                      <p className="text-xs text-brown/60 mt-1 leading-relaxed">Helps users understand required documents, eligibility gaps, and the next steps.</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Bottom micro-action */}
               <div className="mt-4 pt-3 flex items-center justify-between text-brown/50 text-[11px] font-semibold">
-                <span>Showing 3 of 18 available programs</span>
-                <Link href="/recommendations" className="text-primary font-bold hover:underline flex items-center gap-1">
-                  View Detailed Analysis
+                <span>Built for real-world clarity</span>
+                <Link href="/scheme/compare" className="text-primary font-bold hover:underline flex items-center gap-1">
+                  Explore Schemes
                   <ExternalLink className="w-3 h-3" />
                 </Link>
               </div>
             </div>
 
-            {/* Overlapping Stat Badge */}
-            <div className="absolute -bottom-6 -left-6 hidden sm:flex items-center gap-3 p-3.5 rounded-xl bg-white shadow-xl border border-honey/10">
-              <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center text-primary">
-                <IndianRupee className="w-5 h-5" />
-              </div>
-              <div>
-                <p className="font-bold text-brown text-lg">₹1,240+ Cr</p>
-                <p className="text-[11px] font-semibold text-brown/50">Sanctioned Capital Pool</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -271,115 +239,6 @@ export default function Home() {
             <span className="text-4xl lg:text-5xl text-primary font-black leading-none mb-2">12+</span>
             <span className="font-bold text-brown">Regional Languages</span>
             <span className="text-xs text-brown/50 mt-1">Accessible to every citizen</span>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ FEATURES GRID ═══════ */}
-      <section className="w-full max-w-7xl mx-auto px-6 py-24" id="features">
-        <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
-          <span className="text-[11px] font-bold tracking-widest text-primary uppercase mb-2">Designed for Accessibility</span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-brown tracking-tight">
-            Engineered to dismantle bureaucratic friction.
-          </h2>
-          <p className="text-brown/70 mt-3">
-            Every feature in SchemeSaathi is structured to convert complex legislative gazettes into transparent, personalized action plans.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { icon: Search, title: "Personalized Recommendations", desc: "Discover schemes relevant to your profile. Tailored by caste category, geography, enterprise vintage, and investment threshold.", cta: "Smart Filter Matrix" },
-            { icon: CheckCircle, title: "Eligibility Analysis", desc: "Understand which criteria you may meet. Plain-language breakdowns highlight missing pre-requisites before you apply.", cta: "Zero-Guesswork Logic" },
-            { icon: Scale, title: "Scheme Comparison", desc: "Compare relevant schemes in one place. Stack subsidies, moratorium periods, collateral demands, and interest subventions side-by-side.", cta: "Comparative Matrix" },
-            { icon: ClipboardCheck, title: "Application Guidance", desc: "Know what documents and steps come next. Stepwise digital checklists, nodal office contacts, and verified application portals.", cta: "Document Checklists" },
-          ].map((feat, i) => (
-            <div key={i} className="p-6 rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group border border-honey/10">
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-beige/20 text-brown flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-brown transition-colors">
-                  <feat.icon className="w-6 h-6" />
-                </div>
-                <h3 className="font-bold text-brown text-lg mb-2">{feat.title}</h3>
-                <p className="text-sm text-brown/60 leading-relaxed">{feat.desc}</p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-honey/15 flex items-center gap-2 text-primary text-xs font-bold">
-                {feat.cta}
-                <ArrowRight className="w-3.5 h-3.5" />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ═══════ VISUAL STORY & PERSONA SECTION ═══════ */}
-      <section className="w-full bg-honey/5 py-20 px-6 border-y border-honey/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Visual Grid */}
-            <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-              <div className="flex flex-col gap-4">
-                <div className="rounded-2xl overflow-hidden shadow-md h-64 bg-gradient-to-br from-beige/40 to-honey/20 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-3">
-                      <Lightbulb className="w-8 h-8 text-primary" />
-                    </div>
-                    <p className="text-sm font-bold text-brown">Empowered Artisan</p>
-                    <p className="text-xs text-brown/50 mt-1">Handloom Textile Workshop</p>
-                  </div>
-                </div>
-                <div className="p-5 rounded-2xl bg-white shadow-sm border border-honey/10">
-                  <span className="text-3xl font-black text-primary">₹15L</span>
-                  <p className="text-sm font-semibold text-brown mt-1">Stand-Up India Facility</p>
-                  <p className="text-[11px] font-semibold text-brown/50">Sanctioned for rural handloom expansion</p>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4 pt-8">
-                <div className="p-5 rounded-2xl bg-primary text-brown shadow-sm">
-                  <ShieldCheck className="w-8 h-8 mb-2" />
-                  <p className="font-bold text-lg">Guaranteed Direct Subsidies</p>
-                  <p className="text-sm text-brown/80 mt-1">Disbursed via DBT through nationalized partner banks.</p>
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-md h-64 bg-gradient-to-br from-brown/10 to-beige/30 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <div className="w-16 h-16 rounded-2xl bg-honey/30 flex items-center justify-center mx-auto mb-3">
-                      <Rocket className="w-8 h-8 text-brown" />
-                    </div>
-                    <p className="text-sm font-bold text-brown">Tech Entrepreneur</p>
-                    <p className="text-xs text-brown/50 mt-1">Modern Manufacturing Hub</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Descriptive Copy Column */}
-            <div className="lg:col-span-6 flex flex-col gap-6">
-              <span className="text-[11px] font-bold tracking-widest text-primary uppercase">Catalyzing Grassroots Growth</span>
-              <h2 className="text-3xl lg:text-4xl font-extrabold text-brown tracking-tight">
-                Built for everyday visionaries, micro-producers, and emerging firms.
-              </h2>
-              <p className="text-lg text-brown/70 leading-relaxed">
-                Access to capital shouldn&apos;t hinge on knowing legal jargon or relying on expensive middlemen. SchemeSaathi decodes circulars from the National Scheduled Castes Finance Corporation, MSME ministries, and regional state boards into actionable intelligence.
-              </p>
-              <div className="flex flex-col gap-4 mt-2">
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm border border-honey/10">
-                  <div className="w-10 h-10 rounded-lg bg-honey/15 flex items-center justify-center text-primary shrink-0">
-                    <Brain className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-brown">Intelligent Profiler</h4>
-                    <p className="text-sm text-brown/60">Matches key demographics against cross-departmental eligibility matrices automatically.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm border border-honey/10">
-                  <div className="w-10 h-10 rounded-lg bg-honey/15 flex items-center justify-center text-primary shrink-0">
-                    <Languages className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-brown">Bilingual Conversational Clarity</h4>
-                    <p className="text-sm text-brown/60">Provides simple contextual answers to &quot;Am I eligible?&quot; and &quot;What documents must I present?&quot;</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -420,58 +279,6 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* ═══════ INTERACTIVE SCHEME FILTER WIDGET ═══════ */}
-      <section className="w-full bg-beige/10 py-16 px-6 border-y border-honey/10" id="schemes">
-        <div className="max-w-5xl mx-auto rounded-3xl bg-white p-8 sm:p-12 shadow-xl border border-honey/10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
-            <div>
-              <span className="text-[11px] font-bold tracking-widest text-primary uppercase">Live Preview Explorer</span>
-              <h3 className="text-3xl font-bold text-brown mt-1">Try a Quick Filter</h3>
-              <p className="text-sm text-brown/60">Select your category to see real-time scheme recommendations</p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {filterTabs.map((tab) => (
-                <button
-                  key={tab.value}
-                  onClick={() => setActiveFilter(tab.value)}
-                  className={clsx(
-                    "px-4 py-2 rounded-full text-xs font-bold transition-all",
-                    activeFilter === tab.value
-                      ? "bg-brown text-white"
-                      : "bg-beige/20 text-brown/70 hover:bg-beige/40"
-                  )}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {filtered.map((scheme) => (
-              <div key={scheme.id} className="p-5 rounded-xl bg-honey/5 border border-honey/15 flex flex-col justify-between hover:shadow-md transition-all">
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-bold text-primary uppercase tracking-wider">{scheme.ministry}</span>
-                    <span className={clsx(
-                      "px-2.5 py-0.5 rounded-full text-[10px] font-bold",
-                      scheme.highlight ? "bg-primary text-brown" : "bg-beige/30 text-brown"
-                    )}>
-                      {scheme.fit}% {scheme.fitLabel}
-                    </span>
-                  </div>
-                  <h4 className="font-bold text-brown mb-1">{scheme.name}</h4>
-                  <p className="text-xs text-brown/60 leading-relaxed">{scheme.desc}</p>
-                </div>
-                <div className="mt-4 pt-3 border-t border-honey/20 flex items-center justify-between">
-                  <span className="text-xs text-brown font-semibold">{scheme.benefit}</span>
-                  <ArrowRight className="w-4 h-4 text-primary" />
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -530,7 +337,7 @@ export default function Home() {
               <strong>Prototype Demonstration Notice:</strong> Match scores and recommendations shown here are illustrative and meant for concept testing. SchemeSaathi is an affirmative civic initiative designed to simplify scheme discovery for underrepresented entrepreneurs. Final sanction of any loan, grant, or subsidy is subject to official verification by respective State Channelizing Agencies (SCAs), partner banks, and governing ministry nodal desks.
             </p>
             <p className="mt-2 text-brown/30">
-              © 2025 SchemeSaathi. Next-Generation Civic Access Platform.
+              © 2026 SchemeSaathi. Next-Generation Civic Access Platform.
             </p>
           </div>
         </div>

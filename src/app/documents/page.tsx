@@ -30,12 +30,14 @@ export default function DocumentsPage() {
   return (
     <div className="max-w-4xl mx-auto pb-12">
       <div className="mb-10 text-center lg:text-left">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-honey/30 text-brown mb-6">
-          <FileCheck2 className="w-8 h-8" />
+        <div className="flex items-center gap-4 mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-honey/30 text-brown shrink-0">
+            <FileCheck2 className="w-8 h-8" />
+          </div>
+          <h1 className="text-3xl lg:text-4xl font-extrabold text-brown">Your Application Checklist</h1>
         </div>
-        <h1 className="text-3xl lg:text-4xl font-extrabold text-brown mb-4">Your Application Checklist</h1>
         <p className="text-lg text-brown/70 max-w-2xl">
-          Prepare the information and documents that may be required. Final requirements must be verified with the applicable authority.
+          Review the documents and information you may need for your application. Always verify the final requirements with the relevant authority.
         </p>
       </div>
 
@@ -90,17 +92,28 @@ export default function DocumentsPage() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-brown to-brown/90 rounded-3xl p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-lg">
-        <div>
-          <h3 className="text-xl font-bold text-white mb-1">Need help with documents?</h3>
-          <p className="text-honey/80">Our AI assistant can guide you on how to prepare these.</p>
+      <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="w-full sm:flex-1 bg-gradient-to-r from-brown to-brown/90 rounded-3xl p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-lg">
+          <div>
+            <h3 className="text-xl font-bold text-white mb-1">Need help with documents?</h3>
+            <p className="text-honey/80">Our AI assistant can guide you on how to prepare these.</p>
+          </div>
+          <Link 
+            href="/assistant"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary text-brown font-bold hover:bg-primary-hover hover:text-white transition-colors"
+          >
+            <MessageSquare className="w-5 h-5" />
+            Ask AI Assistant
+          </Link>
         </div>
-        <Link 
-          href="/assistant"
-          className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary text-brown font-bold hover:bg-primary-hover hover:text-white transition-colors"
+      </div>
+
+      <div className="mt-8 flex justify-end">
+        <Link
+          href="/locator"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-brown font-bold text-lg shadow-md hover:bg-primary-hover hover:text-white transition-all"
         >
-          <MessageSquare className="w-5 h-5" />
-          Ask AI Assistant
+          Proceed
         </Link>
       </div>
     </div>

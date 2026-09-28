@@ -50,7 +50,7 @@ export default function ProfilePage() {
         <p className="text-primary font-bold tracking-widest uppercase mb-2 text-sm">Registration & Discovery • Step 01 of 03</p>
         <h1 className="text-4xl lg:text-5xl font-extrabold text-brown mb-4 tracking-tight">Tell Us About Yourself</h1>
         <p className="text-lg text-brown/70 max-w-2xl">
-          The more we know about your business, the more relevant your recommendations can be. Every field calibrates subsidized interest limits and non-collateral capital.
+          Tell us a little about yourself and your business so we can find government schemes that are relevant to your needs and eligibility.
         </p>
       </div>
 

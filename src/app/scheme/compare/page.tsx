@@ -48,7 +48,7 @@ export default function ComparePage() {
       <div className="mb-10">
         <h1 className="text-3xl lg:text-4xl font-extrabold text-brown mb-4">Compare Relevant Schemes</h1>
         <p className="text-lg text-brown/70 max-w-3xl leading-relaxed">
-          Based on Rahul's stated requirement, NSFDC is shown as the primary prototype recommendation because the scenario is focused on financial assistance for an SC entrepreneur.
+          Compare scheme benefits, eligibility criteria, and support options to understand how each scheme fits your needs.
         </p>
       </div>
 
@@ -64,9 +64,6 @@ export default function ComparePage() {
                 <th key={scheme.id} className={`p-6 border-b border-honey/20 w-1/4 ${scheme.highlight ? 'bg-primary/5' : ''}`}>
                   <div className="flex flex-col items-start gap-2">
                     <span className="text-xl font-bold text-brown">{scheme.name}</span>
-                    <span className={`px-3 py-1 rounded-full text-sm font-bold ${scheme.highlight ? 'bg-primary text-brown' : 'bg-beige/40 text-brown'}`}>
-                      {scheme.match} Match
-                    </span>
                   </div>
                 </th>
               ))}
@@ -137,11 +134,8 @@ export default function ComparePage() {
             key={scheme.id} 
             className={`bg-white rounded-3xl p-6 shadow-sm border ${scheme.highlight ? 'border-primary shadow-md' : 'border-honey/30'}`}
           >
-            <div className="flex items-center justify-between mb-6 pb-4 border-b border-honey/20">
+            <div className="mb-6 pb-4 border-b border-honey/20">
               <h2 className="text-2xl font-bold text-brown">{scheme.name}</h2>
-              <div className={`px-3 py-1.5 rounded-xl font-bold text-sm ${scheme.highlight ? 'bg-primary text-brown' : 'bg-beige/40 text-brown'}`}>
-                {scheme.match} Match
-              </div>
             </div>
             
             <div className="space-y-4 text-sm mb-6">

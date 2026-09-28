@@ -19,7 +19,6 @@ import { useState } from "react";
 import clsx from "clsx";
 
 const navItems = [
-  { name: "Dashboard", href: "/recommendations", icon: LayoutDashboard },
   { name: "My Profile", href: "/profile", icon: UserCircle },
   { name: "Recommendations", href: "/recommendations", icon: ListChecks },
   { name: "Compare Schemes", href: "/scheme/compare", icon: ArrowRightLeft },
@@ -56,7 +55,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
 
         <nav className="flex-1 px-4 py-4 space-y-2 overflow-y-auto">
           {navItems.map((item) => {
-            const isActive = pathname === item.href || (item.href !== "/recommendations" && pathname.startsWith(item.href));
+            const isActive = item.href === "/"
+              ? pathname === "/"
+              : pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
               <Link
                 key={item.name}
@@ -111,7 +112,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <div className="lg:hidden fixed inset-0 top-[60px] z-40 bg-brown overflow-y-auto">
             <nav className="p-4 space-y-2">
               {navItems.map((item) => {
-                const isActive = pathname === item.href || (item.href !== "/recommendations" && pathname.startsWith(item.href));
+                const isActive = item.href === "/"
+                  ? pathname === "/"
+                  : pathname === item.href || pathname.startsWith(`${item.href}/`);
                 return (
                   <Link
                     key={item.name}
